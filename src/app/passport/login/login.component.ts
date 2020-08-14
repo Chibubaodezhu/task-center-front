@@ -31,23 +31,23 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  rememberCheckChange() {
-
-  }
-
   login() {
+    this.loading = true;
     if (this.beforeLogin()) {
       this.passportService.login(this.form.value).subscribe(res => {
         if (res) {
           if (res['success']) {
             if (this.form.value['remember']) {
               localStorage.setItem('loginInfo', JSON.stringify(this.form.value));
+            } else {
+              localStorage.setItem('loginInfo', '{}');
             }
             this.router.navigate(['/routes/home/dashboard']);
           } else {
             this.message.error(res['errorMsg']);
           }
         } else {
+          this.loading = false;
           this.message.error('服务器异常，请稍后再试');
         }
       });
