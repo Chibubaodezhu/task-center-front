@@ -18,6 +18,11 @@ export class PassportService {
     return this.httpClient.post(url, param);
   }
 
+  getVerifyCode(param) {
+    const url = this.urlPre + 'passport/get_verify_code';
+    return this.httpClient.get(url, {params: param});
+  }
+
   login(param) {
     const url = this.urlPre + 'login';
     return this.httpClient.post(url, null, {params: param});
