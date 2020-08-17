@@ -44,7 +44,6 @@ export class RegisterComponent implements OnInit {
       purpose: 'register'
     };
     this.passportService.getVerifyCode(param).subscribe(res => {
-      console.log(res);
       if (res['success'] && res['data']) {
         this.message.success('验证码发送成功，请至邮箱查看！');
       } else {
