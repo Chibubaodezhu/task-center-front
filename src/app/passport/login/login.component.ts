@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
             } else {
               localStorage.setItem('loginInfo', '{}');
             }
+            localStorage.setItem('userId', this.form.value['username']);
             this.router.navigate(['/routes/home/dashboard']);
           } else {
             this.message.error(res['errorMsg']);

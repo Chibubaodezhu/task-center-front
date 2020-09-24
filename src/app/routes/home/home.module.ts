@@ -6,6 +6,8 @@ import {PersonalCenterComponent} from './personal-center/personal-center.compone
 import {LayoutModule} from '../../layout/layout.module';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DragDropModule} from "@angular/cdk/drag-drop";
+import {NgxEchartsModule} from "ngx-echarts";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
@@ -22,7 +24,9 @@ const routes: Routes = [
     LayoutModule,
     NgZorroAntdModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule,
+    NgxEchartsModule
   ]
 })
 export class HomeModule { }
