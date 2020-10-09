@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {PassportService} from '../../common/service/passport.service';
+import {PassportService} from '../../resources/service/passport.service';
 import {NzMessageService} from 'ng-zorro-antd';
 import {Router} from '@angular/router';
 

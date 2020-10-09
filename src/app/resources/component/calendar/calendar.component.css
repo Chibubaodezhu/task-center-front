@@ -1,0 +1,201 @@
+.calendar-container {
+  display: block;
+  height: 100%;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 14px 24px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.nav-button {
+  display: flex;
+  align-items: center;
+}
+.operation-container {
+  display: flex;
+  align-items: center;
+}
+.toolbar .nav-button .btn-mini {
+  padding: 5px 4px;
+  color: #999;
+  margin: 0;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 0 10px 0 0;
+  color: #fff;
+  font-size: 14px;
+  background-color: #44acb6;
+  border: 1px solid #44acb6;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline-color: #44acb6;
+  background-clip: padding-box;
+}
+.btn.btn-mini {
+  padding: 6px 12px;
+  color: #000;
+  line-height: 1.2;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.toolbar .nav-button .btn-mini .twr {
+  font-size: 12px;
+}
+.twr {
+  display: inline-block;
+  font: normal normal normal 14px/1 Tower;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.twr-angle-left:before {
+  content: "\003c";
+}
+.twr-angle-right:before {
+  content: "\2192";
+}
+.toolbar .nav-button .calendar-title {
+  margin: 0 8px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333;
+  font-weight: 400;
+}
+.toolbar .nav-button .btn-today {
+  margin-left: 16px;
+  padding: 3px 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  font-weight: 600;
+}
+.simple-calendar {
+  padding: 0 24px;
+}
+.simple-calendar .week-title {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.simple-calendar .week-title .weekdays {
+  display: table-row;
+}
+.simple-calendar .week-title .weekdays .weekday {
+  border-bottom: 2px solid #efefef;
+}
+.simple-calendar .week-title .weekday {
+  display: table-cell;
+  padding: 12px;
+  width: 14.286%;
+  height: 12px;
+  line-height: 1;
+  font-size: 12px;
+  color: #777;
+  border-bottom: 2px solid #ccc;
+}
+.simple-calendar .week-title+.weeks {
+  overflow: auto;
+  height: calc(100vh - 226px);
+}
+.simple-calendar .weeks .week {
+  border-bottom: 2px solid #efefef;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+}
+.simple-calendar .weeks .week .days {
+  cursor: default!important;
+  display: table-row;
+}
+.simple-calendar .weeks .week .days .day {
+  height: 158px;
+  border-right: 2px solid #efefef;
+  display: table-cell;
+  width: 14.286%;
+  vertical-align: top;
+  padding: 0 0 20px;
+}
+.simple-calendar .weeks .week .days .day.other-month .info {
+  opacity: 1;
+}
+.simple-calendar .weeks .week .days .day .info {
+  position: relative;
+  font-family: -apple-system,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,Segoe UI,Roboto,sans-serif;
+}
+.simple-calendar .days .day .info {
+  display: flex;
+  align-items: center;
+}
+.simple-calendar .other-month .info {
+  opacity: 1;
+  color: #000;
+}
+.simple-calendar .weeks .week .days .day.other-month .info {
+  color: #ccc;
+}
+.simple-calendar .weeks .week .days .day .info {
+  height: 24px;
+  padding: 12px 8px;
+  color: #000;
+  font: normal 700 24px/1 Calibri;
+}
+.simple-calendar .weeks .week .days .day.other-month .info .cn-day,
+.simple-calendar .weeks .week .days .day.other-month .info .num {
+  opacity: 1;
+}
+.simple-calendar .weeks .week .days .day .info .num {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
+.simple-calendar .weeks .week .days .day .info .cn-day {
+  line-height: 16px;
+  color: #999;
+  display: none;
+}
+.simple-calendar.calendar-show-lunar-calendar .days .info .cn-day {
+  display: block!important;
+}
+.simple-calendar .cn-day {
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.simple-calendar .weeks .week .days .day .info .add-todos {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  right: 8px;
+  top: 8px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #e3e3e3;
+  background: #fff;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.simple-calendar .weeks .week .days .day .info .add-todos:hover {
+  background: #f6f6f6;
+}
+.simple-calendar .weeks .week .days .day .info .add-todos .add-btn {
+  color: #777;
+  font-size: 12px;
+}
+.simple-calendar .weeks .week .days .day:hover .info .add-todos {
+  display: inline-flex;;
+}
+.simple-calendar .day.today {
+  background-color: #fff6c2;
+}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {fromEvent} from 'rxjs';
 import {NzMessageService} from "ng-zorro-antd";
-import {SystemService} from "../common/service/system.service";
+import {SystemService} from "../resources/service/system.service";
 
 @Component({
   selector: 'app-layout',

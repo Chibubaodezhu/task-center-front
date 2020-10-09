@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PassportService} from '../../../common/service/passport.service';
+import {PassportService} from '../../../resources/service/passport.service';
 import {CdkDragDrop, moveItemInArray} from "@angular/cdk/drag-drop";
 import * as echarts from 'echarts';
 import {DatePipe} from "@angular/common";

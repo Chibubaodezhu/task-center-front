@@ -1,0 +1,39 @@
+<div class="calendar-container">
+  <div class="toolbar">
+    <div class="nav-button">
+      <span class="btn btn-mini btn-prev-month" (click)="preMonth()"><i nz-icon nzType="left" nzTheme="outline"></i></span>
+      <span class="calendar-title">{{dateDisplay}}</span>
+      <span class="btn btn-mini btn-next-month" (click)="nextMonth()"><i nz-icon nzType="right" nzTheme="outline"></i></span>
+      <span class="btn btn-mini btn-today" (click)="backToToday()">今天</span>
+    </div>
+    <div></div>
+  </div>
+  <div class="simple-calendar">
+    <div class="week-title">
+      <div class="weekdays">
+        <div class="weekday">周一</div>
+        <div class="weekday">周二</div>
+        <div class="weekday">周三</div>
+        <div class="weekday">周四</div>
+        <div class="weekday">周五</div>
+        <div class="weekday">周六</div>
+        <div class="weekday">周日</div>
+      </div>
+    </div>
+    <div class="weeks">
+      <div class="week" *ngFor="let week of dayList">
+        <div class="days">
+          <div class="day" [ngClass]="{'other-month': !day.currentMonth, 'today': day.today}" *ngFor="let day of week">
+            <div class="info">
+              <span class="num">{{day.date}}</span>
+              <span class="cn-day"></span>
+              <span class="add-todos" nz-tooltip nzTooltipTitle="新建任务">
+                <i class="add-btn" nz-icon nzType="plus" nzTheme="outline"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
