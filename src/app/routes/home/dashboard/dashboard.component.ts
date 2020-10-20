@@ -164,25 +164,11 @@ export class DashboardComponent implements OnInit {
           type: 'bar',
           barCategoryGap: '20%',
           itemStyle: {
-            color: new echarts.graphic.LinearGradient(
-              0, 0, 0, 1,
-              [
-                {offset: 0, color: '#FFFFF0'},
-                {offset: 0.5, color: '#87CEEB'},
-                {offset: 1, color: '#00BFFF'}
-              ]
-            )
+            color: '#87CEEB'
           },
           emphasis: {
             itemStyle: {
-              color: new echarts.graphic.LinearGradient(
-                0, 0, 0, 1,
-                [
-                  {offset: 0, color: '#C1FFC1'},
-                  {offset: 0.7, color: '#C1FFC1'},
-                  {offset: 1, color: '#C1FFC1'}
-                ]
-              )
+              color: '#00BFFF'
             }
           },
           data: [7, 8, 9, 8, 7, 2, 1]
